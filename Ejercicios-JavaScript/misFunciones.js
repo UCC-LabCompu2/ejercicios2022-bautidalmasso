@@ -40,19 +40,32 @@ function CambiarUnidades(id, valor) {
 
     }
 
-    function convertirGR(id){
-        var grad, rad;
-        if (id=="grados"){
-            grad = document.getElementById("grados").value;
-            rad = (grad*Math.PI)/180;
 
-        }
-        else if(id=="radianes"){
-            rad = document.getElementById("radianes").value;
-            grad = (rad*180)/Math.PI
-        }
-        Document.getElementById("grados").value = grad;
-        Document.getElementById("radianes").value = rad;
+}
+
+function convertirGR(id){
+    var grad, rad;
+    if (id=="grados"){
+        grad = document.getElementById("grados").value;
+        rad = (grad*Math.PI)/180;
 
     }
+    else if(id=="radianes"){
+        rad = document.getElementById("radianes").value;
+        grad = (rad*180)/Math.PI
+    }
+    Document.getElementById("grados").value = grad;
+    Document.getElementById("radianes").value = rad;
+
+}
+
+function mostrar_ocultar(valorMO){
+
+    if (valorMO=="val_mostrar"){
+      document.getElementById("divMo").style.display = 'block';
+
+    } else if(valorMO=="val_ocultar"){
+        document.getElementById("divMo").style.display = 'none';
+    }
+
 }
