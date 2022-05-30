@@ -39,4 +39,20 @@ function CambiarUnidades(id, valor) {
         document.LasUnidades.unid_pulgada.value = 12*valor;
 
     }
+
+    function convertirGR(id){
+        var grad, rad;
+        if (id=="grados"){
+            grad = document.getElementById("grados").value;
+            rad = (grad*Math.PI)/180;
+
+        }
+        else if(id=="radianes"){
+            rad = document.getElementById("radianes").value;
+            grad = (rad*180)/Math.PI
+        }
+        Document.getElementById("grados").value = grad;
+        Document.getElementById("radianes").value = rad;
+
+    }
 }
